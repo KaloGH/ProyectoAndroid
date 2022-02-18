@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cviewGiveaways"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/main_navbar_color"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imgv_giveawaysImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:clickable="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/thumbnail"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/badge_type"
+                    android:layout_width="78dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/ic_drawable_badge"
+                    android:baselineAligned="false"
+                    android:paddingTop="5dp"
+                    android:text="DLC A Loot"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/txtv_giveawaysName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:paddingTop="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtv_giveawaysDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#BAB2B2"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:orientation="horizontal">
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

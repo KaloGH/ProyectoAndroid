@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_username"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:endIconMode="clear_text"
+        android:visibility="gone"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textField_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="45dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textField_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_password"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:endIconMode="password_toggle"
+        android:layout_marginTop="45dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textField_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:checked="false"
+            android:text="Login"
+            android:textColor="@color/secondary_color"
+            app:thumbTint="@color/secondary_color"
+            app:trackTint="#4E6717"
+            android:layout_marginLeft="146dp"
+           />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="Register"
+            android:textColor="@color/secondary_color" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login / Register"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:textColor="@color/secondary_color"
+        />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:indicatorColor="@color/secondary_color"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

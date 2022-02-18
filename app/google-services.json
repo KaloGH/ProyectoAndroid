@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1051209320370",
+    "project_id": "gamer4free-27fd4",
+    "storage_bucket": "gamer4free-27fd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051209320370:android:7f57c4e4780ec05dbf06ab",
+        "android_client_info": {
+          "package_name": "com.kaemki.gamer4free"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051209320370-ijvs5d17nfctrt096h7p082292ig6erl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOLgs4Xsm3aU5vP3tyWMTdafXVh9ZPkQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051209320370-ijvs5d17nfctrt096h7p082292ig6erl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

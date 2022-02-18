@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cviewGames"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/main_navbar_color"
+    app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgv_gameImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:clickable="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/thumbnail"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/txtv_gameName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:paddingTop="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtv_gameDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="2"
+
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textColor="#BAB2B2"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="0dp" />
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/button_add"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:clickable="true"
+                        app:lottie_autoPlay="false"
+                        android:background="@drawable/ic_baseline_add_circle_outline_24"
+                        android:backgroundTint="@color/secondary_color"
+                        app:lottie_rawRes="@raw/animation_game_added"
+                        />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_genre"
+                        android:layout_width="85dp"
+                        android:layout_height="48dp"
+                        android:text="MMORPG"
+                        android:textAlignment="center"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        android:clickable="false"
+                        android:foreground="@null"
+                        />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/icon_platform"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="39dp"
+                        android:layout_height="37dp"
+                        android:background="@drawable/ic_baseline_desktop_windows_24"
+                        android:padding="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
