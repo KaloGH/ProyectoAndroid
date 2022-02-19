@@ -1,4 +1,4 @@
-package com.kaemki.gamer4free.ui.games;
+package com.kaemki.gamer4free.ui.fav_games;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,23 +20,23 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> {
+public class FavGamesAdapter extends RecyclerView.Adapter<FavGamesAdapter.ViewHolder> {
 
     private ArrayList<Games> listGames = new ArrayList<Games>();
-    private OnGamesListener onGamesListener;
+    private OnFavGamesListener onFavGamesListener;
     private Context mContext;
 
     public void setmContext(Context mContext) {
         this.mContext = mContext;
     }
 
-    public GamesAdapter(){
+    public FavGamesAdapter(){
 
     }
 
-    public GamesAdapter(ArrayList<Games> listGames, OnGamesListener onGamesListener){
+    public FavGamesAdapter(ArrayList<Games> listGames, OnFavGamesListener onFavGamesListener){
         this.listGames = listGames;
-        this.onGamesListener = onGamesListener;
+        this.onFavGamesListener = onFavGamesListener;
 
     }
 
@@ -46,11 +46,11 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list_games, parent, false);
 
-        return new ViewHolder(view, onGamesListener);
+        return new ViewHolder(view, onFavGamesListener);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GamesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
 
 
@@ -149,9 +149,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
         LottieAnimationView buttonAdd;
         Chip genre;
         TextView platformIcon;
-        OnGamesListener onGamesListener;
+        OnFavGamesListener onGamesListener;
 
-        public ViewHolder(@NonNull View itemView, GamesAdapter.OnGamesListener onGamesListener){
+        public ViewHolder(@NonNull View itemView, OnFavGamesListener onGamesListener){
 
             super(itemView);
             imgGames = itemView.findViewById(R.id.imgv_gameImg);
@@ -171,18 +171,18 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
         }
     }
 
-    public interface OnGamesListener{
+    public interface OnFavGamesListener {
 
         void onGamesClick(int position);
 
     }
 
-    public OnGamesListener getOnGamesListener() {
-        return onGamesListener;
+    public OnFavGamesListener getOnFavGamesListener() {
+        return onFavGamesListener;
     }
 
-    public void setOnGamesListener(OnGamesListener onGamesListener) {
-        this.onGamesListener = onGamesListener;
+    public void setOnFavGamesListener(OnFavGamesListener onFavGamesListener) {
+        this.onFavGamesListener = onFavGamesListener;
     }
 
     public ArrayList<Games> getListGames() {

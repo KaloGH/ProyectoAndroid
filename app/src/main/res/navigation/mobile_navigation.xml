@@ -21,5 +21,17 @@
         android:label="@string/menu_giveaways"
         tools:layout="@layout/fragment_giveaways" />
 
+    <fragment
+        android:id="@+id/nav_fav_games"
+        android:name="com.kaemki.gamer4free.ui.fav_games.FavGamesFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_games" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.kaemki.gamer4free.SettingsActivity$SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/settings_activity" />
+
 
 </navigation>

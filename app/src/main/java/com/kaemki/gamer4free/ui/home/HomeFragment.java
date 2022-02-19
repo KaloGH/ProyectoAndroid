@@ -11,10 +11,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.kaemki.gamer4free.R;
 import com.kaemki.gamer4free.databinding.FragmentHomeBinding;
+import com.kaemki.gamer4free.ui.games.GamesFragment;
 import com.kaemki.gamer4free.ui.login.LoginActivity;
 
 public class HomeFragment extends Fragment {
@@ -33,13 +37,30 @@ public class HomeFragment extends Fragment {
         Intent intent = new Intent(getActivity(), LoginActivity.class);
 
 
-        Button btn_logout = (Button) root.findViewById(R.id.logout);
 
-        btn_logout.setOnClickListener(new View.OnClickListener() {
+        Button btn_games = (Button) root.findViewById(R.id.btn_games);
+        Button btn_giveaways = (Button) root.findViewById(R.id.btn_giveaways);
+        Button btn_favGames = (Button) root.findViewById(R.id.btn_favgames);
+
+        btn_games.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
-                startActivity(intent);
+
+                Navigation.findNavController(view).navigate(R.id.nav_games);
+            }
+        });
+
+        btn_giveaways.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_giveaways);
+            }
+        });
+
+        btn_favGames.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.nav_fav_games);
             }
         });
 

@@ -15,7 +15,18 @@
             android:title="@string/menu_games" />
         <item
             android:id="@+id/nav_giveaways"
-            android:icon="@drawable/ic_baseline_card_giftcard_24"
+            android:icon="@drawable/ic_icons8_social_media_action_18_giveaway"
             android:title="@string/menu_giveaways" />
+
+        <item
+            android:id="@+id/nav_fav_games"
+            android:icon="@drawable/ic_icons8_melting_heart"
+            android:title="Favourites" />
+
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Settings"
+            />
     </group>
 </menu>

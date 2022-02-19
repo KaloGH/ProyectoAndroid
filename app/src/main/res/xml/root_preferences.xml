@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Settings">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            app:defaultValue="false"
+            app:key="nightMode"
+            app:summaryOff="Turn on night mode"
+            app:summaryOn="Turn off night mode"
+            app:title="Night mode" />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

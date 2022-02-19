@@ -15,18 +15,26 @@ import java.util.ArrayList;
 public class DbGames extends DbHelper {
 
     Context context;
+    DbHelper dbHelper;
+    SQLiteDatabase db;
 
     public DbGames(@Nullable Context context) {
         super(context);
         this.context = context;
     }
 
+    private void openDB(){
+        dbHelper = new DbHelper(context);
+        db = dbHelper.getWritableDatabase();
+    }
 
     public long insertFavGames(String title,String imgGame,String platform,String genre,int idGame){
 
+        if (db == null)
+            openDB();
+
         long id = 0;
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
         try {
 
 
@@ -47,8 +55,8 @@ public class DbGames extends DbHelper {
 
     public ArrayList<Games> listAllFavGames() {
 
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if (db == null)
+            openDB();
 
         ArrayList<Games> favGamesList = new ArrayList<>();
         Games game;
@@ -74,18 +82,10 @@ public class DbGames extends DbHelper {
     }
 
     public boolean deleteFavGames(int idGame){
+        if (db == null)
+            openDB();
 
-        boolean deleted = false;
-        DbHelper dbHelper = new DbHelper(context);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        try {
-            db.execSQL("DELETE FROM "+TABLE_GAMES + " WHERE id = '"+idGame+"' LIMIT 1");
-            deleted=true;
-        }catch (Exception ex) {
-            ex.toString();
-            deleted = false;
-        }
-        return deleted;
+        return db.delete(TABLE_GAMES,"id="+idGame,null) > 0;
     }
 
 

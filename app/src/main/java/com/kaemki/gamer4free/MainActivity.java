@@ -61,12 +61,13 @@ public class MainActivity extends AppCompatActivity {
             // Passing each menu ID as a set of Ids because each
             // menu should be considered as top level destinations.
             mAppBarConfiguration = new AppBarConfiguration.Builder(
-                    R.id.nav_home, R.id.nav_games, R.id.nav_giveaways)
+                    R.id.nav_home, R.id.nav_games, R.id.nav_giveaways,R.id.nav_fav_games,R.id.settings)
                     .setOpenableLayout(drawer)
                     .build();
             NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
             NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
             NavigationUI.setupWithNavController(navigationView, navController);
+
 
             ActionBar actionBar;
             actionBar = getSupportActionBar();
@@ -139,36 +140,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // DAY NIGHT MODE SETTING
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-            menu.findItem(R.id.day_night).setTitle("Night mode");
-        } else {
-            menu.findItem(R.id.day_night).setTitle(String.valueOf(AppCompatDelegate.getDefaultNightMode()));
-        }
-
-        menu.findItem(R.id.day_night).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem menuItem) {
-                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                }
-                return false;
-            }
-        });
-
         return true;
     }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu){
         // Inflate the menu; this adds items to the action bar if it is present.
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-            menu.findItem(R.id.day_night).setTitle("Night mode");
-        } else {
-            menu.findItem(R.id.day_night).setTitle("Day mode");
-        }
         return true;
     }
 
